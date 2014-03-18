@@ -1,0 +1,13 @@
+# REPLACE {app_name} BY THE REAL APPLICATION NAME
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /{app_name}/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /{app_name}/index.php [L]
+</IfModule>
+
+# END WordPress
